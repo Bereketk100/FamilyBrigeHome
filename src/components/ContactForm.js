@@ -55,59 +55,63 @@ const ContactForm = () => {
   }
 
   return (
-    <form onSubmit={onSubmit} className="space-y-6">
+    <form onSubmit={onSubmit} className="bg-white p-8 rounded-xl shadow-lg border border-green-100 space-y-6">
       {error && (
         <div className="bg-red-500 text-white p-4 rounded-lg mb-4">
           {error}
         </div>
       )}
-      <div>
+      <div className="mb-6">
+        <label htmlFor="name" className="block text-gray-700 font-medium mb-2">Name</label>
         <input
           type="text"
           id="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          placeholder="Full Name"
+          placeholder="Your name"
           required
-          className="w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg focus:outline-none focus:border-blue-500 text-white"
+          className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition-colors duration-300"
         />
       </div>
-      <div>
+      <div className="mb-6">
+        <label htmlFor="email" className="block text-gray-700 font-medium mb-2">Email</label>
         <input
           type="email"
           id="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email Address"
+          placeholder="Your email"
           required
-          className="w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg focus:outline-none focus:border-blue-500 text-white"
+          className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition-colors duration-300"
         />
       </div>
-      <div>
+      <div className="mb-6">
+        <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">Phone</label>
         <input
           type="tel"
           id="phone"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
           placeholder="Phone Number"
-          className="w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg focus:outline-none focus:border-blue-500 text-white"
+          className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition-colors duration-300"
         />
       </div>
-      <div>
+      <div className="mb-6">
+        <label htmlFor="message" className="block text-gray-700 font-medium mb-2">Message</label>
         <textarea
           id="message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          placeholder="Your Message"
+          placeholder="Your message"
           rows="4"
           required
-          className="w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg focus:outline-none focus:border-blue-500 text-white resize-none"
+          className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition-colors duration-300 resize-none"
         ></textarea>
       </div>
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-blue-600 hover:bg-blue-500 py-3 px-8 rounded-lg text-white font-medium transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full bg-gradient-to-r from-green-500 to-yellow-400 text-white font-semibold py-3 px-6 rounded-lg hover:opacity-90 transition-opacity duration-300 shadow-lg hover:shadow-xl"
       >
         {isSubmitting ? 'Sending...' : 'Send Message'}
       </button>
