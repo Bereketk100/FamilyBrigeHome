@@ -1,5 +1,3 @@
-import { useNavigate } from 'react-router-dom';
-
 const ServiceCard = ({ title, description, icon }) => {
   return (
     <div className="bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:transform hover:scale-105 border border-green-100">
