@@ -94,15 +94,18 @@ const MainPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-500 via-yellow-400 to-green-600 text-gray-800">
+    <div className="min-h-screen bg-gradient-to-br from-green-500 via-yellow-400 to-green-600 text-gray-800">  {/* Restored gradient background */}
       {/* Navigation Banner */}
-      <nav className="fixed top-0 w-full bg-gradient-to-r from-green-500 to-yellow-400 shadow-lg z-50">
+      <nav className="fixed top-0 w-full bg-gradient-to-r from-green-500 to-yellow-400 shadow-lg z-50"> {/* Restored gradient background */}
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <div className="flex items-center space-x-3">
-              <img src="/brige.png" alt="Logo" className="h-10 w-20" /> {/* Changed w-20 to w-32 */}
-              <span className="text-lg font-bold text-white"></span>
+            <div className="flex items-center">
+              <img 
+                src="/brige.png" 
+                alt="Family Bridge Home Logo" 
+                className="h-12 w-auto"
+              />
             </div>
 
             {/* Desktop Navigation */}
@@ -238,7 +241,7 @@ const MainPage = () => {
 
       {/* Hero Section */}
       <div className="pt-16">
-        <section ref={homeRef} className="relative w-full h-screen flex items-center justify-center bg-gradient-to-br from-green-500 via-yellow-400 to-green-600">
+        <section ref={homeRef} className="relative w-full h-screen flex items-center justify-center bg-gradient-to-br from-green-500 via-yellow-400 to-green-600"> {/* Restored gradient */}
           <div className="container mx-auto text-center relative z-10 px-4 max-w-4xl">
             {/* Logo */}
             <img src="/brige.png" alt="Logo" className="mx-auto h-16 w-64 mb-6" /> {/* Reduced from h-20 w-80 */}
@@ -267,7 +270,7 @@ const MainPage = () => {
       </div>
 
       {/* Services Section */}
-      <section ref={servicesRef} className="py-24 bg-gradient-to-br from-yellow-50 via-white to-green-50">
+      <section ref={servicesRef} className="py-24 bg-gradient-to-br from-green-50 via-white to-yellow-50"> {/* Restored gradient */}
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-semibold text-center mb-16 text-green-600">Our Services</h2>
           <p className="text-gray-700 text-center max-w-4xl mx-auto mb-16">
@@ -332,7 +335,7 @@ const MainPage = () => {
       </section>
 
       {/* Combined About Us & Executive Director Section */}
-      <section ref={aboutRef} className="py-24 bg-gradient-to-br from-green-50 to-yellow-50">
+      <section ref={aboutRef} className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16 text-green-600">About Us</h2>
           <div className="max-w-6xl mx-auto">
@@ -398,7 +401,7 @@ const MainPage = () => {
       </section>
 
       {/* Contact Us Section */}
-      <section ref={contactRef} id="contact" className="py-24 bg-gradient-to-br from-yellow-50 to-white">
+      <section ref={contactRef} id="contact" className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-semibold text-center mb-16 text-green-600">Contact Us</h2>
           <div className="max-w-lg mx-auto">
@@ -408,7 +411,7 @@ const MainPage = () => {
       </section>
 
       {/* Mission Section with Enhanced Design */}
-      <section ref={missionRef} className="py-24 bg-gradient-to-br from-green-50 via-white to-yellow-50">
+      <section ref={missionRef} className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-4xl font-bold text-green-600 mb-6">Our Mission & Values</h2>
