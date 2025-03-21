@@ -78,17 +78,8 @@ const ServiceModal = ({ isOpen, onClose, service, imageIndex }) => {
         
         {/* Content */}
         <div className="flex flex-col md:flex-row">
-          {/* Image Container - Left on desktop, full width on mobile */}
-          <div className="w-full md:w-1/2 h-[250px] md:h-[600px] relative flex-shrink-0">
-            <img 
-              src={getServiceImage(service.title)}
-              alt={service.title}
-              className={`w-full h-full object-cover ${getImagePosition(service.title)}`}
-            />
-          </div>
-
-          {/* Content Container - Right on desktop, below on mobile */}
-          <div className="w-full md:w-1/2 p-4 md:p-6 max-h-[70vh] md:max-h-[600px] overflow-y-auto">
+          {/* Content Container - Left on desktop */}
+          <div className="w-full md:w-1/2 p-4 md:p-6 max-h-[70vh] md:max-h-[600px] overflow-y-auto order-2 md:order-1">
             <div className="space-y-6">
               <div>
                 <h4 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">Overview</h4>
@@ -123,6 +114,15 @@ const ServiceModal = ({ isOpen, onClose, service, imageIndex }) => {
                 </button>
               </div>
             </div>
+          </div>
+
+          {/* Image Container - Right on desktop, top on mobile */}
+          <div className="w-full md:w-1/2 h-[250px] md:h-[600px] relative flex-shrink-0 order-1 md:order-2">
+            <img 
+              src={getServiceImage(service.title)}
+              alt={service.title}
+              className={`w-full h-full object-cover ${getImagePosition(service.title)}`}
+            />
           </div>
         </div>
       </div>
