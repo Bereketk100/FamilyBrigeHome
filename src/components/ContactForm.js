@@ -14,7 +14,7 @@ const ContactForm = () => {
     e.stopPropagation();
     setIsSubmitting(true);
 
-    fetch("https://formcarry.com/s/6ke1FR2Sql5", {
+    fetch("https://formcarry.com/s/702qkgfR8KI", {
       method: 'POST',
       headers: { 
         "Accept": "application/json",
@@ -44,12 +44,20 @@ const ContactForm = () => {
 
   if (isSuccess) {
     return (
-      <div className="text-center p-8 bg-gray-900 rounded-lg">
-        <svg className="w-16 h-16 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-        </svg>
-        <h3 className="text-2xl font-semibold mb-4">Thank You!</h3>
-        <p className="text-gray-300">Your message has been sent successfully. We'll get back to you soon.</p>
+      <div className="text-center p-8 bg-white rounded-lg border border-green-100 shadow-lg">
+        <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg className="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <h3 className="text-2xl font-semibold mb-4 text-green-600">Thank You!</h3>
+        <p className="text-gray-600">Your message has been sent successfully. We'll get back to you soon.</p>
+        <button 
+          onClick={() => setIsSuccess(false)}
+          className="mt-6 px-6 py-2 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-lg hover:from-green-600 hover:to-green-700 transition-all duration-300"
+        >
+          Send Another Message
+        </button>
       </div>
     );
   }
@@ -100,12 +108,11 @@ const ContactForm = () => {
         <label htmlFor="message" className="block text-gray-700 font-medium mb-2">Message</label>
         <textarea
           id="message"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          placeholder="Your message"
+          name="message"
           rows="4"
+          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 resize-none"
+          placeholder="Your message"
           required
-          className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition-colors duration-300 resize-none"
         ></textarea>
       </div>
       <button
