@@ -294,13 +294,20 @@ const MainPage = () => {
                 {/* Location Icon and Address */}
                 <div className="flex-1 text-center md:text-left">
                   <div className="flex items-center justify-center md:justify-start mb-6">
-                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
-                    </div>
-                    <h3 className="text-2xl font-semibold text-green-700">Find Us</h3>
+                    <a 
+                      href="https://www.google.com/maps/@45.5146892,-122.4469249,3a,75y,175.91h,90t/data=!3m7!1e1!3m5!1sadmpkE9fxXvxrByv6FoWag!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DadmpkE9fxXvxrByv6FoWag%26yaw%3D175.91!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI1MDMxOC4wIKXMDSoASAFQAw%3D%3D" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center hover:text-green-600 transition-colors"
+                    >
+                      <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4 group-hover:bg-green-200 transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                      </div>
+                      <h3 className="text-2xl font-semibold text-green-700 group-hover:text-green-600">Find Us</h3>
+                    </a>
                   </div>
                   <p className="text-gray-700 text-lg mb-4">
                     21024 SE Salmon St<br />
